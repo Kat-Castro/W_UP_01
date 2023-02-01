@@ -47,7 +47,7 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 boxplot(pushups~position,data=mydata)
 ```
   
-We see that the Skill box has accomplished more pushups compared to the Line box, where the skill contains 50 percentile while the line contains 20 percentile.
+We see that the Skill box has accomplished more push-ups compared to the Line box, where the skill contains 50 percentile while the line contains 20 percentile.
 
 ### Numerical Descriptive Results
 
@@ -59,11 +59,16 @@ We see that the Skill box has accomplished more pushups compared to the Line box
 favstats(pushups~position,data=mydata)
 ```
   
-The skill players do 3x the average of pushups compared to the line players
+The skill players do 3x the average of push-ups compared to the line players
 ## Inferential Results
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+t.test(pushups~position,data=mydata)
+```
+
+The probability of acquiring a result such as this is due to the 0.000009421, showing there was no real difference between the line and skill players regarding the push-ups. In this case, I reject the hypothesis provided as the information doesn't add up together.
 
 # Discussion and Conclusion
 
